@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Convertor</title>
+</head>
+<body>
+    <style>
+        .container{
+            max-width: 600px;
+            padding: 20px;
+            margin: 40px;
+            border:1px solid #ccc;
+            border-radius: 5px;
+        }
+    textarea{
+         width: 50%;
+         margin: 20px;
+         height: 150px;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+    }
+    button
+    {
+        padding: 10px 20px;
+        background-color: aquamarine;
+        cursor: pointer;
+        border-radius: 5px;
+
+    }
+    button :hover
+    {
+        background-color: aquamarine;
+    }
+    
+    #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+    <div class="container">
+        <h2>String converter</h2>
+        <textarea name="" id="inputString" placeholder="enter your string"></textarea>
+        <button onclick="convert()">Convert</button>
+        <div id = "output"></div>
+    </div>
+    
+    <script>
+        // Internal JavaScript
+        function convert() {
+            var inputString = document.getElementById("inputString").value;
+            var convertedString = inputString.toUpperCase(); // Convert input to uppercase, you can change this as needed
+            document.getElementById("output").innerHTML = "<strong>Converted String:</strong> " + convertedString;
+        }
+    </script>
+</body>
+</html>
